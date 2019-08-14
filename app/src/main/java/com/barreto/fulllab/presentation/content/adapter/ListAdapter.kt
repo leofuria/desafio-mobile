@@ -1,0 +1,49 @@
+package com.barreto.fulllab.presentation.content.adapter
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import com.barreto.android.domain.content.model.ContentItem
+import com.barreto.fulllab.R
+import com.barreto.fulllab.presentation.base.adapter.PagedAdapter
+import com.barreto.fulllab.presentation.category.adapter.CategoryViewHolder
+import io.reactivex.Observable
+import io.reactivex.subjects.PublishSubject
+
+class ListAdapter : PagedAdapter<ContentItem, ListViewHolder>(DIFF_CALLBACK) {
+
+    private val notifyClick: PublishSubject<Pair<Int, ContentItem>> = PublishSubject.create()
+
+    override fun createItemView(parent: ViewGroup): ListViewHolder {
+
+        return ListViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_content, parent, false)
+        ).apply {
+            getItemClickObservable().subscribe {
+                notifyClick.onNext(Pair(adapterPosition, it))
+            }
+        }
+    }
+
+    override fun bindItemView(holder: ListViewHolder, position: Int) {
+
+        holder.bindItem(getItem(position))
+    }
+
+    fun getNotifyItemClick(): Observable<Pair<Int, ContentItem>> {
+        return notifyClick
+    }
+
+    private companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ContentItem>() {
+
+            override fun areContentsTheSame(oldItem: ContentItem, newItem: ContentItem): Boolean {
+                return oldItem == newItem
+            }
+
+            override fun areItemsTheSame(oldItem: ContentItem, newItem: ContentItem): Boolean {
+                return oldItem.id == newItem.id
+            }
+        }
+    }
+}
