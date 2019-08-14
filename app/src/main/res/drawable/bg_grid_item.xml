@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Botão pressed-->
+    <item android:state_pressed="true">
+        <shape>
+
+            <solid android:color="@color/color_grey_lightest" />
+
+            <corners android:radius="@dimen/radius_mini" />
+
+        </shape>
+    </item>
+
+    <!--Botão default-->
+    <item>
+        <shape>
+
+            <solid android:color="@android:color/white" />
+
+            <corners android:radius="@dimen/radius_mini" />
+
+        </shape>
+    </item>
+</selector>

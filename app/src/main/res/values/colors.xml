@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="color_grey_darkest">#333333</color>
+    <color name="color_correct_status_font">#666666</color>
+    <color name="color_grey_dark">#888888</color>
+    <color name="color_grey">#aaaaaa</color>
+    <color name="color_grey_light">#dddddd</color>
+    <color name="color_correct_status_lightest">#DFDFDF</color>
+    <color name="color_grey_lightest">#ececec</color>
+
+    <color name="color_yellow_light">#FFFAD0</color>
+    <color name="color_yellow">#FDD835</color>
+
+    <color name="color_red_light">#ff635f</color>
+
+    <color name="color_purple_lightest">#dfdcf2</color>
+    <color name="color_purple_light">#8881e3</color>
+    <color name="color_purple">#5F5CA7</color>
+    <color name="color_purple_dark">#504A80</color>
+    <color name="color_purple_darkest">#3B2B49</color>
+
+    <color name="button_action">#1abc9c</color>
+    <color name="button_action_disabled">#501abc9c</color>
+    <color name="button_action_pressed">#39997f</color>
+
+</resources>

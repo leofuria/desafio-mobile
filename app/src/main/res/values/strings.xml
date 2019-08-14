@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ProjectFullLab</string>
+
+    <string name="try_again">Tentar novamente</string>
+    <string name="list_breadcrumb">Listagem</string>
+    <string name="error_internet_title">Ah, não! \nVocê está sem internet!</string>
+    <string name="error_internet_msg">Por favor, verifique a sua conexão e tente novamente.</string>
+    <string name="action_retry">Tentar Novamente</string>
+    <string name="generic_error">Desculpe, ocorreu um erro</string>
+    <string name="contents_not_found">Nenhum conteúdo encontrado</string>
+    <string name="bt_category">Categorias</string>
+
+</resources>
